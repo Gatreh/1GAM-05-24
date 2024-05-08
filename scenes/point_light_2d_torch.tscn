@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cc57gkpnsd2py"]
+
+[ext_resource type="Texture2D" uid="uid://c37yljtrwbu1" path="res://assets/sprites/light.png" id="1_c76ul"]
+[ext_resource type="Texture2D" uid="uid://b23ylmii6q0vn" path="res://assets/sprites/torch_spritesheet.png" id="1_cm2gf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8lql"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y68p6"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf4on"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujsfq"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbasb"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42ogq"]
+atlas = ExtResource("1_cm2gf")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qld3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8lql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y68p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf4on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujsfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbasb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42ogq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uevkc"]
+polygon = PackedVector2Array(17, -1, 16, -3616, 336, -3616, 336, -1)
+
+[node name="Torch" type="PointLight2D"]
+color = Color(0.968448, 0.588694, 1, 1)
+energy = 1.54
+shadow_enabled = true
+texture = ExtResource("1_c76ul")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.235294, 0.686275, 1, 1)
+sprite_frames = SubResource("SpriteFrames_qld3p")
+autoplay = "default"
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_uevkc")
+sdf_collision = false

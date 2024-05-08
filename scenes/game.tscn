@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbjseoo71mbev"]
+[gd_scene load_steps=17 format=3 uid="uid://bbjseoo71mbev"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_jp85m"]
 [ext_resource type="PackedScene" uid="uid://ddwramsoeuhw1" path="res://scenes/player.tscn" id="1_ory8y"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="5_bmpd3"]
 [ext_resource type="PackedScene" uid="uid://detmspxc14uo2" path="res://scenes/slime.tscn" id="6_txwl8"]
 [ext_resource type="FontFile" uid="uid://df6flfbckhvkw" path="res://assets/fonts/PixelOperator8.ttf" id="7_o7dlh"]
+[ext_resource type="AudioStream" uid="uid://wr26u2kxcfh4" path="res://assets/music/time_for_adventure.mp3" id="9_1jr1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3ceb"]
 texture = ExtResource("2_a455y")
@@ -569,3 +570,8 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="platform_space" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_1jr1s")
+autoplay = true
+bus = &"Music"
