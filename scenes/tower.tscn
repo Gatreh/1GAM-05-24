@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://pf2swnw4f1cq"]
+[gd_scene load_steps=37 format=3 uid="uid://pf2swnw4f1cq"]
 
 [ext_resource type="Texture2D" uid="uid://bkebhupwskutv" path="res://assets/sprites/world_tileset_tower.png" id="1_lg080"]
 [ext_resource type="PackedScene" uid="uid://bh5sjhgq5svr1" path="res://scenes/platform_tower_purple.tscn" id="2_5xv6y"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://detmspxc14uo2" path="res://scenes/slime.tscn" id="4_m56kb"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="5_v3hyp"]
 [ext_resource type="Texture2D" uid="uid://c37yljtrwbu1" path="res://assets/sprites/light.png" id="6_ind2s"]
-[ext_resource type="AudioStream" uid="uid://b8l7ob41thpyr" path="res://assets/sounds/jump13.wav" id="6_rja0t"]
 [ext_resource type="PackedScene" uid="uid://cc57gkpnsd2py" path="res://scenes/point_light_2d_torch.tscn" id="8_u221u"]
 [ext_resource type="AudioStream" uid="uid://c74i2s3waqvv4" path="res://assets/music/DOS88CheckingManifest.wav" id="11_dfc2d"]
 
@@ -984,12 +983,3 @@ texture_scale = 0.5
 [node name="LightOccluder2D" type="LightOccluder2D" parent="light/PointLight2D3"]
 visible = false
 occluder = SubResource("OccluderPolygon2D_g3266")
-
-[node name="player jump audio" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(176, -132)
-stream = ExtResource("6_rja0t")
-volume_db = -1.025
-pitch_scale = 1.07
-max_distance = 6485.0
-panning_strength = 0.0
-bus = &"tower sfx"

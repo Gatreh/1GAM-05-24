@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://ddwramsoeuhw1"]
+[gd_scene load_steps=27 format=3 uid="uid://ddwramsoeuhw1"]
 
 [ext_resource type="Texture2D" uid="uid://byexo8s5i3b8v" path="res://assets/sprites/knight.png" id="1_7ullm"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lj48g"]
+[ext_resource type="AudioStream" uid="uid://b8l7ob41thpyr" path="res://assets/sounds/jump13.wav" id="3_ekcgs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdhq1"]
 atlas = ExtResource("1_7ullm")
@@ -190,3 +191,12 @@ shape = SubResource("CircleShape2D_46dl5")
 process_callback = 0
 wait_time = 0.5
 one_shot = true
+
+[node name="PlayerJumpAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(176, -132)
+stream = ExtResource("3_ekcgs")
+volume_db = -1.025
+pitch_scale = 1.07
+max_distance = 6485.0
+panning_strength = 0.0
+bus = &"tower sfx"
