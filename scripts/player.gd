@@ -3,21 +3,22 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var coyote_timer = $CoyoteTimer
 @onready var jump_audio = $PlayerJumpAudio
+@onready var pickup_double_jump = $"../PickupDoubleJump"
 
 const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -250.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var double_jumps = 1
-
-
+var double_jumps = 0
+var upgraded_double_jumps = 0
 
 func _physics_process(delta):
+	
 	if not is_on_floor(): # Add gravity if you're in the air
 		velocity.y += gravity * delta
 	else: # Otherwise reset double jump and coyote timer.
-		double_jumps = 1
+		double_jumps = upgraded_double_jumps
 		coyote_timer.start()
 	
 	# Handle jump.
@@ -37,13 +38,13 @@ func _physics_process(delta):
 		animated_sprite.flip_h = true
 	elif direction > 0:
 		animated_sprite.flip_h = false
-	
+
 	# If you're pressing down you can pass through platforms on mask 3.
 	if Input.is_action_pressed("down"):
 		set_collision_mask_value(3, false)
 	elif Input.is_action_just_released("down"):
 		set_collision_mask_value(3, true)
-	
+
 	# Play Animations
 	if is_on_floor():
 		if direction == 0:
@@ -52,7 +53,7 @@ func _physics_process(delta):
 			animated_sprite.play("walk")
 	else:
 		animated_sprite.play("jump")
-	
+
 	# Control directions
 	if direction:
 		velocity.x = direction * SPEED
@@ -60,10 +61,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	move_and_slide()
-	# TODO: Add Double jumping
 
-func add_jump():
-	double_jumps = 1
+
 
 
 

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Backeys-First game"
+config/name="Not a mario clone"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
