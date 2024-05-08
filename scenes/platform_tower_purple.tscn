@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh5sjhgq5svr1"]
+
+[ext_resource type="Texture2D" uid="uid://web146dhwxoe" path="res://assets/sprites/platforms_more.png" id="1_mjcwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_np3re"]
+size = Vector2(30, 7)
+
+[node name="Platform Tower" type="AnimatableBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mjcwc")
+region_enabled = true
+region_rect = Rect2(96, 87, 32, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_np3re")
+one_way_collision = true

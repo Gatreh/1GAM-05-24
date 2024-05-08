@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var coyote_timer = $CoyoteTimer
+@onready var jump_audio = $"../player jump audio"
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -9,6 +10,8 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var double_jumps = 1
+
+
 
 func _physics_process(delta):
 	if not is_on_floor(): # Add gravity if you're in the air
@@ -21,9 +24,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and coyote_timer.time_left > 0:
 		coyote_timer.stop()
 		velocity.y = JUMP_VELOCITY
+		jump_audio.playing = true
 	elif Input.is_action_just_pressed("jump") and double_jumps > 0:
 		double_jumps -= 1
 		velocity.y = JUMP_VELOCITY
+		jump_audio.playing = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -59,3 +64,7 @@ func _physics_process(delta):
 
 func add_jump():
 	double_jumps = 1
+
+
+
+
