@@ -6,6 +6,7 @@ extends Area2D
 func _on_body_entered(body):
 	animated_sprite_2d.play("open")
 	print("body entered")
+	emit_signal("next_level")
 
 
 func _on_body_exited(body):

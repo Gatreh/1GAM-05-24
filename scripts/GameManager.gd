@@ -7,3 +7,11 @@ var score := 0
 
 func add_point():
 	score += 1
+
+func _on_next_level():
+	print("works")
+
+
+func _on_door_body_entered(body):
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://scenes/tower.tscn")

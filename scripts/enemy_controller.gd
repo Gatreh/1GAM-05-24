@@ -1,2 +1,2 @@
 extends Node
-class Enemy Controller
+class_name Enemy_Controller
