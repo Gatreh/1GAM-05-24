@@ -594,9 +594,8 @@ position = Vector2(599, -2)
 position = Vector2(727, -2)
 
 [node name="Bird" parent="Enemies" instance=ExtResource("8_31acp")]
-position = Vector2(664, -149)
-
-[node name="platform_space" type="Node2D" parent="."]
+position = Vector2(664, -146)
+direction = 0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_1jr1s")
