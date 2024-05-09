@@ -1,39 +1,32 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx1xcsps0iqx6"]
+[gd_scene load_steps=9 format=3 uid="uid://bx1xcsps0iqx6"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_2pnvd"]
 [ext_resource type="Texture2D" uid="uid://c6w5wuo7p8sit" path="res://assets/sprites/Batspurple.png" id="2_b08io"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="3_u37bj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l3uyk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_blmpv"]
 atlas = ExtResource("2_b08io")
-region = Rect2(0, 0, 51, 16)
+region = Rect2(0, 0, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_juedu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv1lx"]
 atlas = ExtResource("2_b08io")
-region = Rect2(51, 0, 51, 16)
+region = Rect2(96, 0, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ypwu6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_elsax"]
 atlas = ExtResource("2_b08io")
-region = Rect2(102, 0, 51, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ea1rs"]
-atlas = ExtResource("2_b08io")
-region = Rect2(153, 0, 51, 16)
+region = Rect2(48, 0, 48, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnv2w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l3uyk")
+"texture": SubResource("AtlasTexture_blmpv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_juedu")
+"texture": SubResource("AtlasTexture_wv1lx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ypwu6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ea1rs")
+"texture": SubResource("AtlasTexture_elsax")
 }],
 "loop": true,
 "name": &"moving",
@@ -53,15 +46,18 @@ animation = &"moving"
 autoplay = "moving"
 
 [node name="Killzone" parent="." instance=ExtResource("3_u37bj")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-1.5, -7.5)
 shape = SubResource("RectangleShape2D_ix1rf")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 target_position = Vector2(-25, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 target_position = Vector2(22, 0)
