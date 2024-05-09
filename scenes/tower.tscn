@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="5_v3hyp"]
 [ext_resource type="Texture2D" uid="uid://c37yljtrwbu1" path="res://assets/sprites/light.png" id="6_ind2s"]
 [ext_resource type="PackedScene" uid="uid://cc57gkpnsd2py" path="res://scenes/point_light_2d_torch.tscn" id="8_u221u"]
-[ext_resource type="PackedScene" uid="uid://bx1xcsps0iqx6" path="res://scenes/bats.tscn" id="9_dg1je"]
-[ext_resource type="PackedScene" uid="uid://d1vbwxgnc5f74" path="res://scenes/birds.tscn" id="10_mvmpb"]
+[ext_resource type="PackedScene" path="res://scenes/bats.tscn" id="9_dg1je"]
+[ext_resource type="PackedScene" uid="uid://bi03ltxqa344a" path="res://scenes/birds.tscn" id="10_mvmpb"]
 [ext_resource type="AudioStream" uid="uid://c74i2s3waqvv4" path="res://assets/music/DOS88CheckingManifest.wav" id="11_dfc2d"]
-[ext_resource type="PackedScene" uid="uid://8o1tq178f52g" path="res://scenes/pickup_double_jump.tscn" id="13_067cn"]
+[ext_resource type="PackedScene" uid="uid://5ipuqq6xsb35" path="res://scenes/pickup_double_jump.tscn" id="13_067cn"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u68f4"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)

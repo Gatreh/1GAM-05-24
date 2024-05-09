@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1vbwxgnc5f74"]
+[gd_scene load_steps=10 format=3 uid="uid://bi03ltxqa344a"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_jrgjh"]
 [ext_resource type="Texture2D" uid="uid://cu5csyy0yt2hf" path="res://assets/sprites/fly_anim_spritesheet_bird.png" id="2_o24yw"]

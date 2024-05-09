@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://8o1tq178f52g"]
+[gd_scene load_steps=21 format=3 uid="uid://5ipuqq6xsb35"]
 
 [ext_resource type="Script" path="res://scripts/pickup_double_jump.gd" id="1_v24bq"]
 [ext_resource type="Texture2D" uid="uid://c3qiid1kuk6fh" path="res://assets/sprites/coin.png" id="2_edaal"]
