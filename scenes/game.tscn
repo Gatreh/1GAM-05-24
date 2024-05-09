@@ -515,7 +515,7 @@ position_smoothing_enabled = true
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" groups=["coins"] instance=ExtResource("4_ysgtc")]
-position = Vector2(233, -45)
+position = Vector2(264, -39)
 
 [node name="Coin2" parent="Coins" groups=["coins"] instance=ExtResource("4_ysgtc")]
 position = Vector2(447, -55)
@@ -582,7 +582,7 @@ autoplay = "move"
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("6_txwl8")]
-position = Vector2(313, -2)
+position = Vector2(376, -2)
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("6_txwl8")]
 position = Vector2(664, -2)
