@@ -1,39 +1,47 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx1xcsps0iqx6"]
+[gd_scene load_steps=12 format=3 uid="uid://bx1xcsps0iqx6"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_2pnvd"]
 [ext_resource type="Texture2D" uid="uid://c6w5wuo7p8sit" path="res://assets/sprites/Batspurple.png" id="2_b08io"]
+[ext_resource type="Texture2D" uid="uid://b5wi64ryyrk7d" path="res://assets/sprites/Batspurplealt.png" id="3_e4k0c"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="3_u37bj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l3uyk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wijgv"]
 atlas = ExtResource("2_b08io")
-region = Rect2(0, 0, 51, 16)
+region = Rect2(240, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_juedu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o82ap"]
 atlas = ExtResource("2_b08io")
-region = Rect2(51, 0, 51, 16)
+region = Rect2(144, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ypwu6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lwtt"]
 atlas = ExtResource("2_b08io")
-region = Rect2(102, 0, 51, 16)
+region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ea1rs"]
-atlas = ExtResource("2_b08io")
-region = Rect2(153, 0, 51, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwld2"]
+atlas = ExtResource("3_e4k0c")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lej0y"]
+atlas = ExtResource("3_e4k0c")
+region = Rect2(0, 0, 48, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnv2w"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l3uyk")
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_wijgv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_juedu")
+"texture": SubResource("AtlasTexture_o82ap")
+}, {
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_0lwtt")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_hwld2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ypwu6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ea1rs")
+"texture": SubResource("AtlasTexture_lej0y")
 }],
 "loop": true,
 "name": &"moving",
@@ -41,27 +49,32 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix1rf"]
-size = Vector2(47, 15)
+size = Vector2(33, 12)
 
 [node name="Bat" type="Node2D"]
 script = ExtResource("1_2pnvd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_vnv2w")
 animation = &"moving"
 autoplay = "moving"
+frame = 3
+frame_progress = 0.415552
 
 [node name="Killzone" parent="." instance=ExtResource("3_u37bj")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(-1.5, -7.5)
+position = Vector2(-1.5, -11)
 shape = SubResource("RectangleShape2D_ix1rf")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 target_position = Vector2(-25, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 target_position = Vector2(22, 0)
