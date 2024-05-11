@@ -5,8 +5,9 @@ extends Node2D
 @onready var ray_cast_right = $RayCastRight
 @onready var animated_sprite = $AnimatedSprite2D
 
-enum move_type {RAYCAST, ANIMATION}
+enum move_type {RAYCAST, DISTANCE}
 @export var movement_type : move_type
+@export var distance : int = 0 ## This is only required if the move_type is DISTANCE, otherwise unused.
 @export var SPEED := 60
 @export_enum("Right:1", "Left:-1") var direction : int = 1 ## This lets the direction variable be set in the inspector to start moving either left or right per instance of the scene.
 
