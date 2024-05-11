@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bx1xcsps0iqx6"]
+[gd_scene load_steps=12 format=3 uid="uid://dydx48tj7pme8"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_2pnvd"]
 [ext_resource type="Texture2D" uid="uid://c6w5wuo7p8sit" path="res://assets/sprites/Batspurple.png" id="2_b08io"]
