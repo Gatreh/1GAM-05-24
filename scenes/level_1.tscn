@@ -1210,11 +1210,14 @@ position = Vector2(727, 0)
 
 [node name="Bird" parent="Enemies" instance=ExtResource("9_dj2vh")]
 position = Vector2(600, -144)
+movement_type = 1
 distance = 144
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_n5prn")
 autoplay = true
+max_distance = 7500.0
+attenuation = 0.0
 bus = &"Music"
 
 [node name="NextLevelDoor" parent="." instance=ExtResource("11_d0vy3")]
