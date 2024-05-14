@@ -1099,12 +1099,13 @@ unique_name_in_owner = true
 script = ExtResource("1_nviox")
 
 [node name="Killzone" parent="." instance=ExtResource("2_xyyi0")]
-position = Vector2(0, 71)
+position = Vector2(-40, 71)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_ekpin")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-40, 0)
 tile_set = SubResource("TileSet_0p0ss")
 format = 2
 layer_0/name = "Background"
@@ -1116,7 +1117,6 @@ layer_2/tile_data = PackedInt32Array(-65294, 786433, 2, -65295, 786433, 2, -6529
 
 [node name="Player" parent="." instance=ExtResource("5_ugqa6")]
 z_index = 5
-position = Vector2(72, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -7)
@@ -1131,60 +1131,60 @@ position_smoothing_enabled = true
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(264, -37)
+position = Vector2(224, -37)
 
 [node name="Coin2" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(447, -53)
+position = Vector2(407, -53)
 
 [node name="Coin3" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(483, -53)
+position = Vector2(443, -53)
 
 [node name="Coin4" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(680, -10)
+position = Vector2(640, -10)
 
 [node name="Coin5" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(696, -10)
+position = Vector2(656, -10)
 
 [node name="Coin6" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(631, -10)
+position = Vector2(591, -10)
 
 [node name="Coin7" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(648, -10)
+position = Vector2(608, -10)
 
 [node name="Coin8" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(664, -10)
+position = Vector2(624, -10)
 
 [node name="Coin9" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(664, -158)
+position = Vector2(624, -158)
 
 [node name="Coin12" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(831, -10)
+position = Vector2(791, -10)
 
 [node name="Coin13" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(848, -10)
+position = Vector2(808, -10)
 
 [node name="Coin14" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(865, -10)
+position = Vector2(825, -10)
 
 [node name="Coin10" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(680, -152)
+position = Vector2(640, -152)
 
 [node name="Coin11" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
-position = Vector2(648, -152)
+position = Vector2(608, -152)
 
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("7_8bkgj")]
-position = Vector2(816, -27)
+position = Vector2(776, -27)
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("7_8bkgj")]
-position = Vector2(848, -27)
+position = Vector2(808, -27)
 
 [node name="Platform3" parent="Platforms" instance=ExtResource("7_8bkgj")]
-position = Vector2(880, -27)
+position = Vector2(840, -27)
 
 [node name="Node2D" type="Node2D" parent="Platforms"]
-position = Vector2(576, -92.5)
+position = Vector2(536, -92.5)
 
 [node name="Platform2" parent="Platforms/Node2D" instance=ExtResource("7_8bkgj")]
 
@@ -1197,19 +1197,19 @@ autoplay = "move"
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("8_tsxsl")]
-position = Vector2(376, 0)
+position = Vector2(336, 0)
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("8_tsxsl")]
-position = Vector2(664, 0)
+position = Vector2(624, 0)
 
 [node name="Slime3" parent="Enemies" instance=ExtResource("8_tsxsl")]
-position = Vector2(599, 0)
+position = Vector2(559, 0)
 
 [node name="Slime4" parent="Enemies" instance=ExtResource("8_tsxsl")]
-position = Vector2(727, 0)
+position = Vector2(687, 0)
 
 [node name="Bird" parent="Enemies" instance=ExtResource("9_dj2vh")]
-position = Vector2(600, -144)
+position = Vector2(560, -144)
 movement_type = 1
 distance = 144
 
@@ -1221,7 +1221,9 @@ attenuation = 0.0
 bus = &"Music"
 
 [node name="NextLevelDoor" parent="." instance=ExtResource("11_d0vy3")]
-position = Vector2(3729, -32)
+unique_name_in_owner = true
+position = Vector2(3689, -32)
 scale = Vector2(2, 2)
+allow_close = false
 
 [connection signal="body_entered" from="NextLevelDoor" to="GameManager" method="_on_door_body_entered"]

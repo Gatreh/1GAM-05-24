@@ -1,7 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://babnp2r1ea36t"]
+[gd_scene load_steps=26 format=3 uid="uid://babnp2r1ea36t"]
 
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_insdo"]
 [ext_resource type="Texture2D" uid="uid://clklkl0jvf2ur" path="res://assets/sprites/door_sprites1heet.png" id="2_pstqd"]
+[ext_resource type="Texture2D" uid="uid://fr71crgrpfyx" path="res://assets/sprites/door_sprites1heet1.png" id="3_hul65"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbam1"]
+atlas = ExtResource("2_pstqd")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ljcg0"]
 atlas = ExtResource("2_pstqd")
@@ -39,9 +44,9 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("2_pstqd")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fbam1"]
-atlas = ExtResource("2_pstqd")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjdtt"]
+atlas = ExtResource("3_hul65")
+region = Rect2(416, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_giyqf"]
 atlas = ExtResource("2_pstqd")
@@ -83,6 +88,14 @@ region = Rect2(416, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fbam1")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ljcg0")
 }, {
 "duration": 1.0,
@@ -110,16 +123,16 @@ animations = [{
 "texture": SubResource("AtlasTexture_u5ktq")
 }],
 "loop": false,
-"name": &"close",
+"name": &"closing",
 "speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fbam1")
+"texture": SubResource("AtlasTexture_bjdtt")
 }],
 "loop": true,
-"name": &"idle",
-"speed": 8.0
+"name": &"open",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -150,7 +163,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_d7rit")
 }],
 "loop": false,
-"name": &"open",
+"name": &"opening",
 "speed": 8.0
 }]
 
@@ -164,8 +177,8 @@ script = ExtResource("1_insdo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gscai")
-animation = &"close"
-autoplay = "idle"
+animation = &"open"
+autoplay = "closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.98131)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://pf2swnw4f1cq"]
+[gd_scene load_steps=54 format=3 uid="uid://pf2swnw4f1cq"]
 
 [ext_resource type="Texture2D" uid="uid://bkebhupwskutv" path="res://assets/sprites/world_tileset_tower.png" id="1_lg080"]
 [ext_resource type="PackedScene" uid="uid://bh5sjhgq5svr1" path="res://scenes/platform_tower_purple.tscn" id="2_5xv6y"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://c74i2s3waqvv4" path="res://assets/music/DOS88CheckingManifest.wav" id="11_dfc2d"]
 [ext_resource type="PackedScene" uid="uid://5ipuqq6xsb35" path="res://scenes/pickup_double_jump.tscn" id="13_067cn"]
 [ext_resource type="PackedScene" path="res://scenes/doorlvl2.tscn" id="13_i4a2d"]
+[ext_resource type="PackedScene" uid="uid://babnp2r1ea36t" path="res://scenes/door.tscn" id="14_sxdiw"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u68f4"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -906,9 +907,17 @@ scale = Vector2(1.02517, 1.02517)
 occluder = SubResource("OccluderPolygon2D_g3266")
 
 [node name="Door" parent="." instance=ExtResource("13_i4a2d")]
+visible = false
 modulate = Color(0.264034, 0.275272, 0.250396, 1)
 position = Vector2(128, -104)
 scale = Vector2(1.5, 1.5)
+
+[node name="Door2" parent="." instance=ExtResource("14_sxdiw")]
+modulate = Color(0.262745, 0.27451, 0.25098, 1)
+position = Vector2(128, -103)
+scale = Vector2(1.5, 1.5)
+is_open = true
+allow_open = false
 
 [node name="Player" parent="." instance=ExtResource("3_b6m2s")]
 modulate = Color(0.156863, 0.156863, 0.156863, 0.917647)
