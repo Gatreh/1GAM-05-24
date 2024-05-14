@@ -189,7 +189,7 @@ shape = SubResource("CircleShape2D_46dl5")
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 0.5
+wait_time = 0.125
 one_shot = true
 
 [node name="PlayerJumpAudio" type="AudioStreamPlayer2D" parent="."]
