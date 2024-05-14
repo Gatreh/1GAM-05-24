@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var coyote_timer = $CoyoteTimer
 @onready var jump_audio = $PlayerJumpAudio
-@onready var pickup_double_jump = $"../PickupDoubleJump"
+@onready var pickup_double_jump = $"../Powerups/PickupDoubleJump"
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -250.0
@@ -62,7 +62,8 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-
+func upgrade_jumps():
+	upgraded_double_jumps += 1
 
 
 
