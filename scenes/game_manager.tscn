@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bndsxu841krbu"]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_7a0jo"]
+[ext_resource type="AudioStream" uid="uid://wr26u2kxcfh4" path="res://assets/music/time_for_adventure.mp3" id="2_e1w0n"]
+[ext_resource type="AudioStream" uid="uid://c74i2s3waqvv4" path="res://assets/music/DOS88CheckingManifest.wav" id="3_c5sqb"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_7a0jo")
+
+[node name="AudioStreamPlayerLevel1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_e1w0n")
+bus = &"Music"
+
+[node name="AudioStreamPlayerLevel2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c5sqb")

@@ -1,18 +1,30 @@
 extends Node
 
-@onready var tile_map = $"../TileMap"
-@onready var total_coins := get_tree().get_nodes_in_group("coins")
+@onready var level_music = 	{
+	1 : $AudioStreamPlayerLevel1,
+	2 : $AudioStreamPlayerLevel2
+}
+@onready var level_scenes = {
+	1 : "res://scenes/level_1.tscn",
+	2 : "res://scenes/level_2.tscn"
+}
 
 var score := 0
+
+func start_music(level : int):
+	level_music[level].autoplay = true
+	level_music[level].play()
+
+func end_music(level : int):
+	level_music[level].autoplay = false
+	level_music[level].stop()
+	
+	
 
 func add_point():
 	score += 1
 
-func _on_next_level():
-	print("works")
-
-
-func _on_door_body_entered(body):
-	if %NextLevelDoor.allow_open:
-		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_file("res://scenes/level_2.tscn")
+func next_level(level : int):
+	end_music(level - 1)
+	get_tree().change_scene_to_file(level_scenes[level])
+	start_music(2)
