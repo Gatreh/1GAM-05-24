@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bi03ltxqa344a"]
 
-[ext_resource type="Script" path="res://scripts/bird.gd" id="1_s6sw1"]
+[ext_resource type="Script" path="res://scripts/enemy_controller.gd" id="1_h1hdi"]
 [ext_resource type="Texture2D" uid="uid://cu5csyy0yt2hf" path="res://assets/sprites/fly_anim_spritesheet_bird.png" id="2_o24yw"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="3_4rrpq"]
 
@@ -45,7 +45,7 @@ size = Vector2(10, 10)
 
 [node name="Bird" type="Node2D"]
 position = Vector2(0, 5)
-script = ExtResource("1_s6sw1")
+script = ExtResource("1_h1hdi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.729412, 0.709804, 0.882353, 0.878431)
