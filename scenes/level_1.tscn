@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://bbjseoo71mbev"]
+[gd_scene load_steps=21 format=3 uid="uid://bbjseoo71mbev"]
 
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_nviox"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kgb6d"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="2_xyyi0"]
 [ext_resource type="Texture2D" uid="uid://bkebhupwskutv" path="res://assets/sprites/world_tileset_tower.png" id="4_4toup"]
 [ext_resource type="PackedScene" uid="uid://ddwramsoeuhw1" path="res://scenes/player.tscn" id="5_ugqa6"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c01p67w6vr7gi" path="res://scenes/platform.tscn" id="7_8bkgj"]
 [ext_resource type="PackedScene" uid="uid://detmspxc14uo2" path="res://scenes/slime.tscn" id="8_tsxsl"]
 [ext_resource type="PackedScene" uid="uid://bi03ltxqa344a" path="res://scenes/birds.tscn" id="9_dj2vh"]
-[ext_resource type="AudioStream" uid="uid://wr26u2kxcfh4" path="res://assets/music/time_for_adventure.mp3" id="10_n5prn"]
 [ext_resource type="PackedScene" uid="uid://babnp2r1ea36t" path="res://scenes/door.tscn" id="11_d0vy3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ekpin"]
@@ -777,10 +776,7 @@ _data = {
 }
 
 [node name="Level 1" type="Node2D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_nviox")
+script = ExtResource("1_kgb6d")
 
 [node name="Killzone" parent="." instance=ExtResource("2_xyyi0")]
 position = Vector2(-40, 71)
@@ -914,18 +910,10 @@ position = Vector2(464, -144)
 movement_type = 1
 distance = 144
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-115, 0)
-stream = ExtResource("10_n5prn")
-autoplay = true
-max_distance = 7500.0
-attenuation = 0.0
-bus = &"Music"
-
 [node name="NextLevelDoor" parent="." instance=ExtResource("11_d0vy3")]
 unique_name_in_owner = true
-position = Vector2(3512, -24)
+position = Vector2(3512, 0)
 scale = Vector2(1.5, 1.5)
 allow_close = false
 
-[connection signal="body_entered" from="NextLevelDoor" to="GameManager" method="_on_door_body_entered"]
+[connection signal="body_entered" from="NextLevelDoor" to="." method="_on_next_level_door_body_entered"]

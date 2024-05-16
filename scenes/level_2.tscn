@@ -928,6 +928,22 @@ _data = {
 "move2": SubResource("Animation_d7x47")
 }
 
+[sub_resource type="Animation" id="Animation_bm6lb"]
+resource_name = "Purple5"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(83, -1064), Vector2(141, -1064)]
+}
+
 [sub_resource type="Animation" id="Animation_8vqvq"]
 length = 0.001
 tracks/0/type = "value"
@@ -958,55 +974,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-77, -584), Vector2(173, -584)]
-}
-
-[sub_resource type="Animation" id="Animation_bm6lb"]
-resource_name = "Purple5"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(83, -1064), Vector2(141, -1064)]
-}
-
-[sub_resource type="Animation" id="Animation_rjjeu"]
-resource_name = "purple6"
-length = 4.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(141, -1112), Vector2(83, -1112)]
-}
-
-[sub_resource type="Animation" id="Animation_k2qej"]
-resource_name = "purple7"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(83, -1161), Vector2(141, -1161)]
 }
 
 [sub_resource type="Animation" id="Animation_23d4a"]
@@ -1075,6 +1042,39 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(152, -1399), Vector2(152, -1241)]
+}
+
+[sub_resource type="Animation" id="Animation_rjjeu"]
+resource_name = "purple6"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(141, -1112), Vector2(83, -1112)]
+}
+
+[sub_resource type="Animation" id="Animation_k2qej"]
+resource_name = "purple7"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(83, -1161), Vector2(141, -1161)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t118x"]

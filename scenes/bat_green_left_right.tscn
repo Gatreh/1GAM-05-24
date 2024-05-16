@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://fxnmvk78ddu"]
+[gd_scene load_steps=12 format=3 uid="uid://djr8epvi7xfdo"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_4p0jq"]
 [ext_resource type="Texture2D" uid="uid://c6w5wuo7p8sit" path="res://assets/sprites/Batspurple.png" id="2_140xm"]
@@ -52,7 +52,7 @@ animations = [{
 size = Vector2(33, 12)
 
 [node name="BatGreenLeftRight" type="Node2D"]
-modulate = Color(0.112206, 0.256427, 0.0506299, 1)
+modulate = Color(0.369008, 0.380904, 0.380922, 1)
 position = Vector2(49, -1248)
 scale = Vector2(0.9, 0.9)
 script = ExtResource("1_4p0jq")
@@ -67,7 +67,6 @@ frame = 3
 frame_progress = 0.415552
 
 [node name="Killzone" parent="." instance=ExtResource("4_wyw3s")]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-1.5, -11)

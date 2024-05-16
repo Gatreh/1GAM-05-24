@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dydx48tj7pme8"]
 
-[ext_resource type="Script" path="res://scripts/slime.gd" id="1_2pnvd"]
+[ext_resource type="Script" path="res://scripts/enemy_controller.gd" id="1_plshu"]
 [ext_resource type="Texture2D" uid="uid://c6w5wuo7p8sit" path="res://assets/sprites/Batspurple.png" id="2_b08io"]
 [ext_resource type="Texture2D" uid="uid://b5wi64ryyrk7d" path="res://assets/sprites/Batspurplealt.png" id="3_e4k0c"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="3_u37bj"]
@@ -52,7 +52,7 @@ animations = [{
 size = Vector2(33, 12)
 
 [node name="Bat" type="Node2D"]
-script = ExtResource("1_2pnvd")
+script = ExtResource("1_plshu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
