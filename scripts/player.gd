@@ -65,6 +65,8 @@ func _physics_process(delta):
 
 func upgrade_jumps():
 	upgraded_double_jumps += 1
+	
+
 
 
 
