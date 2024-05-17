@@ -1,9 +1,7 @@
-
 [gd_scene load_steps=69 format=3 uid="uid://pf2swnw4f1cq"]
 
-
-
 [ext_resource type="FontFile" uid="uid://df6flfbckhvkw" path="res://assets/fonts/PixelOperator8.ttf" id="1_ejypk"]
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_n435u"]
 [ext_resource type="Texture2D" uid="uid://bkebhupwskutv" path="res://assets/sprites/world_tileset_tower.png" id="2_wp7db"]
 [ext_resource type="PackedScene" uid="uid://bh5sjhgq5svr1" path="res://scenes/platform_tower_purple.tscn" id="3_wr5be"]
 [ext_resource type="PackedScene" uid="uid://babnp2r1ea36t" path="res://scenes/door.tscn" id="4_lcky1"]
@@ -1093,6 +1091,7 @@ _data = {
 }
 
 [node name="Level 2" type="Node2D"]
+script = ExtResource("1_n435u")
 
 [node name="Labels" type="Node" parent="."]
 
@@ -1112,7 +1111,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="TileMap" type="TileMap" parent="."]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
+modulate = Color(0.712129, 0.71213, 0.712129, 1)
 position = Vector2(-128, 80)
 tile_set = SubResource("TileSet_h38e1")
 format = 2
@@ -1133,14 +1132,14 @@ layer_3/tile_data = PackedInt32Array(-65535, 851968, 1, -65534, 983040, 0, -6553
 [node name="Player" parent="." instance=ExtResource("5_nb8bf")]
 modulate = Color(0.156863, 0.156863, 0.156863, 1)
 z_index = 5
-position = Vector2(57, -1192)
+position = Vector2(-57, -1265)
 scale = Vector2(0.9, 0.9)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 visible = false
 zoom = Vector2(6, 6)
 limit_left = -112
-limit_top = -2000
+limit_top = -4030
 limit_right = 208
 limit_bottom = 80
 limit_smoothed = true
@@ -1489,7 +1488,7 @@ position = Vector2(-35, -1120)
 
 [node name="Slime9" parent="Enemies/Slimes" instance=ExtResource("10_g0si3")]
 modulate = Color(0.835294, 0.0313726, 0.137255, 0.521569)
-position = Vector2(-86, -1168)
+position = Vector2(-84, -1168)
 
 [node name="Slime10" parent="Enemies/Slimes" instance=ExtResource("10_g0si3")]
 modulate = Color(0.835294, 0.0313726, 0.137255, 0.521569)
@@ -1497,7 +1496,7 @@ position = Vector2(20, -992)
 
 [node name="Slime11" parent="Enemies/Slimes" instance=ExtResource("10_g0si3")]
 modulate = Color(0.835294, 0.0313726, 0.137255, 0.521569)
-position = Vector2(-55, -944)
+position = Vector2(-52, -944)
 
 [node name="Slime12" parent="Enemies/Slimes" instance=ExtResource("10_g0si3")]
 modulate = Color(0.835294, 0.0313726, 0.137255, 0.521569)
@@ -1527,8 +1526,14 @@ scale = Vector2(0.9, 0.9)
 
 [node name="Bat5" parent="Enemies/Bats" instance=ExtResource("11_dd2cd")]
 modulate = Color(0.369008, 0.380904, 0.380922, 1)
-position = Vector2(0, -772)
+position = Vector2(8, -772)
 scale = Vector2(0.9, 0.9)
+
+[node name="RayCastLeft" parent="Enemies/Bats/Bat5" index="2"]
+visible = true
+
+[node name="RayCastRight" parent="Enemies/Bats/Bat5" index="3"]
+visible = true
 
 [node name="Bat6" parent="Enemies/Bats" instance=ExtResource("11_dd2cd")]
 modulate = Color(0.369008, 0.380904, 0.380922, 1)
@@ -1537,17 +1542,26 @@ scale = Vector2(0.9, 0.9)
 
 [node name="Bat7" parent="Enemies/Bats" instance=ExtResource("11_dd2cd")]
 modulate = Color(0.369008, 0.380904, 0.380922, 1)
-position = Vector2(-79, -805)
+position = Vector2(-72, -805)
 scale = Vector2(0.9, 0.9)
+
+[node name="RayCastLeft" parent="Enemies/Bats/Bat7" index="2"]
+visible = true
 
 [node name="Bat8" parent="Enemies/Bats" instance=ExtResource("11_dd2cd")]
 modulate = Color(0.369008, 0.380904, 0.380922, 1)
-position = Vector2(18, -858)
+position = Vector2(11, -861)
 scale = Vector2(0.9, 0.9)
+
+[node name="RayCastLeft" parent="Enemies/Bats/Bat8" index="2"]
+visible = true
+
+[node name="RayCastRight" parent="Enemies/Bats/Bat8" index="3"]
+visible = true
 
 [node name="Bat9" parent="Enemies/Bats" instance=ExtResource("11_dd2cd")]
 modulate = Color(0.369008, 0.380904, 0.380922, 1)
-position = Vector2(-79, -903)
+position = Vector2(-69, -908)
 scale = Vector2(0.9, 0.9)
 
 [node name="Birds" type="Node" parent="Enemies"]
@@ -1684,16 +1698,16 @@ shadow_filter_smooth = 5.0
 texture_scale = 2.68
 
 [node name="Torch10" parent="TorchLight" instance=ExtResource("13_hgh7i")]
-position = Vector2(180, -993)
+position = Vector2(171, -995)
 scale = Vector2(1.23328, 1.42778)
 color = Color(0.663424, 0.507659, 1, 1)
-energy = 3.19
+energy = 4.41
 range_z_min = -4096
 range_z_max = 4096
 shadow_color = Color(0, 0, 0, 1)
-shadow_filter = 2
+shadow_filter = 1
 shadow_filter_smooth = 5.0
-texture_scale = 2.68
+texture_scale = 5.73
 
 [node name="Torch13" parent="TorchLight" instance=ExtResource("13_hgh7i")]
 position = Vector2(-80, -1137)
@@ -1795,7 +1809,20 @@ range_z_max = 4096
 shadow_color = Color(0, 0, 0, 1)
 shadow_filter = 2
 shadow_filter_smooth = 5.0
-texture_scale = 2.3
+texture_scale = 1.16
+
+[node name="Torchgreen7" parent="TorchLight" instance=ExtResource("13_hgh7i")]
+modulate = Color(0.708264, 0.872026, 0.159986, 1)
+position = Vector2(-85, -1328)
+scale = Vector2(1.23328, 1.42778)
+color = Color(0.461358, 0.689579, 0.379179, 1)
+energy = 3.14
+range_z_min = -4096
+range_z_max = 4096
+shadow_color = Color(0, 0, 0, 1)
+shadow_filter = 2
+shadow_filter_smooth = 0.9
+texture_scale = 1.16
 
 [node name="ExtraLight" type="Node" parent="."]
 
@@ -1959,5 +1986,11 @@ occluder = SubResource("OccluderPolygon2D_g3266")
 
 [connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
 
+[editable path="Enemies/Bats/Bat5"]
+[editable path="Enemies/Bats/Bat7"]
+[editable path="Enemies/Bats/Bat8"]
+[editable path="TorchLight/Torch"]
+[editable path="TorchLight/Torch10"]
 [editable path="TorchLight/Torchgreen4"]
 [editable path="TorchLight/Torchgreen6"]
+[editable path="TorchLight/Torchgreen7"]
