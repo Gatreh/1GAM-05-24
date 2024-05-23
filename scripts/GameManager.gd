@@ -18,8 +18,6 @@ func start_music(level : int):
 func end_music(level : int):
 	level_music[level].autoplay = false
 	level_music[level].stop()
-	
-	
 
 func add_point():
 	score += 1
