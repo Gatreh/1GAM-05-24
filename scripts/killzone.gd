@@ -9,5 +9,5 @@ func _on_body_entered(body):
 	death_timer.start()
 	
 func _on_death_timer_timeout():
-	get_tree().reload_current_scene()
+	GameManager.die()
 	Engine.time_scale = 1.0

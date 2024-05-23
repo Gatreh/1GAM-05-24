@@ -12,7 +12,6 @@ const JUMP_VELOCITY = -250.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var double_jumps = 0
 var upgraded_double_jumps = 0
-var fuck_git = true
 
 func _physics_process(delta):
 	
