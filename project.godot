@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scenes/game_manager.tscn"
 
+[debug]
+
+gdscript/warnings/unused_private_class_variable=0
+
 [display]
 
 window/size/viewport_width=1920
