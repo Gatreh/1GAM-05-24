@@ -815,6 +815,21 @@ position = Vector2(128, -37)
 [node name="Coin2" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
 position = Vector2(311, -53)
 
+[node name="Coin15" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
+position = Vector2(1215, -32)
+
+[node name="Coin16" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
+position = Vector2(1330, -32)
+
+[node name="Coin17" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
+position = Vector2(944, -40)
+
+[node name="Coin18" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
+position = Vector2(776, -96)
+
+[node name="Coin19" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
+position = Vector2(800, -104)
+
 [node name="Coin3" parent="Coins" groups=["coins"] instance=ExtResource("6_fo0g3")]
 position = Vector2(347, -53)
 
@@ -894,7 +909,8 @@ position = Vector2(304, 65.5)
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("8_tsxsl")]
-position = Vector2(240, 0)
+position = Vector2(207, -1)
+direction = -1
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("8_tsxsl")]
 position = Vector2(528, 0)
@@ -907,7 +923,7 @@ position = Vector2(591, 0)
 
 [node name="Bird" parent="Enemies" instance=ExtResource("9_dj2vh")]
 position = Vector2(464, -144)
-movement_type = 1
+movement_type = 2
 distance = 144
 
 [node name="NextLevelDoor" parent="." instance=ExtResource("11_d0vy3")]

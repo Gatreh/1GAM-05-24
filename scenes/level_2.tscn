@@ -1132,7 +1132,7 @@ layer_3/tile_data = PackedInt32Array(-65535, 851968, 1, -65534, 983040, 0, -6553
 [node name="Player" parent="." instance=ExtResource("5_nb8bf")]
 modulate = Color(0.156863, 0.156863, 0.156863, 1)
 z_index = 5
-position = Vector2(-57, -1265)
+position = Vector2(-0.999998, -3.00001)
 scale = Vector2(0.9, 0.9)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
