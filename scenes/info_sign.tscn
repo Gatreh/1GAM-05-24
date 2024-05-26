@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://wpwbty3duvgh"]
+
+[ext_resource type="Script" path="res://InfoSign.gd" id="1_eyk74"]
+[ext_resource type="Texture2D" uid="uid://bkebhupwskutv" path="res://assets/sprites/world_tileset_tower.png" id="2_gn4qb"]
+[ext_resource type="FontFile" uid="uid://df6flfbckhvkw" path="res://assets/fonts/PixelOperator8.ttf" id="3_ulih6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5qtf"]
+size = Vector2(20, 16)
+
+[node name="InfoSign" type="Area2D"]
+script = ExtResource("1_eyk74")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("2_gn4qb")
+region_enabled = true
+region_rect = Rect2(128, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_u5qtf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -49.0
+offset_top = -93.0
+offset_right = 48.0
+offset_bottom = -23.0
+theme_override_fonts/font = ExtResource("3_ulih6")
+theme_override_font_sizes/font_size = 8
+text = " "
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

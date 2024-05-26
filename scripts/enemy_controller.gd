@@ -12,6 +12,7 @@ enum move_type {HORIZONTAL_RAYCAST, VERTICAL_RAYCAST, DISTANCE}
 @export var movement_type : move_type
 @export var distance : int = 0 ## This is only required if the move_type is DISTANCE, otherwise unused.
 @export var SPEED := 60 ## This is the speed of the enemy mob in a single direction.
+# Direction can be updated to use a Vector2 instead of an int if we want to be more "correct" about it
 @export_enum("Up:2", "Right:1", "Left:-1", "Down:-2") var direction : int = 1 ## This lets the direction variable be set in the inspector to start moving either left or right per instance of the scene.
 var initial_direction ## This stores the initial direction and can be used for logic of how to handle each movement type
 @onready var initial_position = position.x ## Used as an anchor to be able to find out how far away an enemy is able to travel before returning while using the move_type.DISTANCE
