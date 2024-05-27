@@ -4,8 +4,8 @@ class_name Enemy_Controller
 
 @onready var ray_cast_left = $RayCastLeft
 @onready var ray_cast_right = $RayCastRight
-@onready var ray_cast_up = $RayCastUp
-@onready var ray_cast_down = $RayCastDown
+# @onready var ray_cast_up = $RayCastUp
+# @onready var ray_cast_down = $RayCastDown
 @onready var animated_sprite = $AnimatedSprite2D
 
 enum move_type {HORIZONTAL_RAYCAST, VERTICAL_RAYCAST, DISTANCE}
