@@ -28,7 +28,7 @@ voice/4/cutoff_hz = 16000.0
 voice/4/pan = 0.0
 
 [resource]
-bus/0/volume_db = -3.11736
+bus/0/volume_db = -80.0
 bus/1/name = &"Music"
 bus/1/solo = false
 bus/1/mute = false
