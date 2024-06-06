@@ -9,7 +9,7 @@ extends Node
 	2 : "res://scenes/level_2.tscn"
 }
 
-var initial_lives := 3
+var initial_lives := 6
 var lives := initial_lives
 var score := 0
 var current_level := 1 # Keep on 1 for release, change if testing.
