@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://c37yljtrwbu1" path="res://assets/sprites/light.png" id="7_v5f7x"]
 [ext_resource type="PackedScene" uid="uid://5ipuqq6xsb35" path="res://scenes/pickup_double_jump.tscn" id="8_jsrih"]
 [ext_resource type="PackedScene" uid="uid://75x0uosfoeoi" path="res://scenes/killzone.tscn" id="9_q4mh7"]
-[ext_resource type="PackedScene" uid="uid://detmspxc14uo2" path="res://scenes/slime.tscn" id="10_g0si3"]
-[ext_resource type="PackedScene" uid="uid://dydx48tj7pme8" path="res://scenes/bats.tscn" id="11_dd2cd"]
-[ext_resource type="PackedScene" uid="uid://bi03ltxqa344a" path="res://scenes/birds.tscn" id="12_3x7fs"]
+[ext_resource type="PackedScene" uid="uid://detmspxc14uo2" path="res://scenes/enemies/slime.tscn" id="10_g0si3"]
+[ext_resource type="PackedScene" uid="uid://dydx48tj7pme8" path="res://scenes/enemies/bats.tscn" id="11_dd2cd"]
+[ext_resource type="PackedScene" uid="uid://bi03ltxqa344a" path="res://scenes/enemies/birds.tscn" id="12_3x7fs"]
 [ext_resource type="PackedScene" uid="uid://cc57gkpnsd2py" path="res://scenes/point_light_2d_torch.tscn" id="13_hgh7i"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ud7yk"]
